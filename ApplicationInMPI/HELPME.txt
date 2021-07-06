@@ -1,0 +1,21 @@
+
+To run this application with two or more threads you will need install Microsoft MPI at: https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi.
+
+To implement the knowledge studied here, you need to include additional files to your solution.
+ > Right click on selected project -> Properties
+ > C/C++ -> General
+ > Additional Include Directories -> Click to down arrow -> Edit -> New Line -> Find where you instaled microsoft MPI and select INCLUDE folder, here is in C:\Program Files (x86)\Microsoft SDKs\MPI\Include
+ > Click in OK.
+ > Now go to Linker -> General
+ > Additional Library Directories -> Click to down arrow -> Edit -> New Line -> Find where you instaled microsoft MPI and select LIB folder, and select x86 folder, here is in C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x86
+ > Click in OK.
+ > Now go to Linker -> Input
+ > Additional Dependencies -> Click to down arrow -> Edit -> at first white text square write "msmpi.lib" (without space and quotation marks) -> Ok
+ > Click in Apply.
+ 
+ All steps are performed in this video from youtuber "WilliamWilliam" (channel URL-> https://www.youtube.com/channel/UCnD7j2rO2LKpXnJj6F4fd5Q)
+ At video: https://www.youtube.com/watch?v=BA_Mqi3a9HI
+ 
+ Thank you William !!
+
+Done, now you can call "#include mpi.h".
