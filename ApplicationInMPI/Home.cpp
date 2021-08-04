@@ -37,19 +37,29 @@ class Home
 		/// <returns>String with random name</returns>
 		string GetRandomCityName() {
 			string choices[] =
-				{
-					"Columbus",
-					"Dallas",
-					"Mesa",
-					"Austin",
-					"Miami",
-					"Tulsa",
-					"New Orleans",
-					"Omaha",
-					"Atlanta",
-					"Sacramento"
-				};
+			{
+				"Columbus",
+				"Dallas",
+				"Mesa",
+				"Austin",
+				"Miami",
+				"Tulsa",
+				"New Orleans",
+				"Omaha",
+				"Atlanta",
+				"Sacramento"
+			};
 
 			return choices[rand() % choices->size() + 1];
+		};
+
+		Home BuildRandom() {
+			Home returnObject;
+			returnObject.Identify = rand();
+			returnObject.CityName = GetRandomCityName();
+			returnObject.LengthOfHome = rand() % 100 + 1;
+			returnObject.WidthOfHome = rand() % 100 + 1;
+
+			return returnObject;
 		}
 };
